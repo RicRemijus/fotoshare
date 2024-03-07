@@ -1,0 +1,29 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        .container{
+            margin-top: 5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .card{margin: auto;}
+    </style>
+    <title>Fotoshare</title>
+</head>
+<body>
+    <div class="container row">
+        {% for image in images %}
+        <div class="card">
+            <img src="{{image.pic.url}}" height="400" width="400" alt="">
+            <div class="card-body">
+                <p>Use Fotoshare to share nice memory of you in pictures</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

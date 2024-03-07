@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        .container{
+            margin-top: 20rem;
+            align-items: center;
+        }
+    </style>
+    <title>Upload Multiple files here</title>
+</head>
+<body>
+    <div class="container">
+        <form enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload Files</label>
+                {{form}}
+            </div>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+</body>
+</html>
